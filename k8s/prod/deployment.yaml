@@ -15,7 +15,6 @@ spec:
     spec:
       containers:
       - name: polling-app
-        image: your-registry/polling-app:latest
-        imagePullPolicy: IfNotPresent
+        image: nginx:latest   # same placeholder image
         ports:
-        - containerPort: 8080
+        - containerPort: 80
