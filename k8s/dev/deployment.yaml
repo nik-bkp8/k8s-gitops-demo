@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: polling-app
+  namespace: polling-app-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: polling-app
+  template:
+    metadata:
+      labels:
+        app: polling-app
+    spec:
+      containers:
+      - name: polling-app
+        image: nginx:latest   # temporary placeholder image
+        ports:
+        - containerPort: 80
